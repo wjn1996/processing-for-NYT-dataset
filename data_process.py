@@ -423,7 +423,7 @@ train_sample_bags_new, word2id, word2vec = process_sample(train_sample_bags, wor
 print('完成训练语料数值化处理\n开始对测试语料进行数值化...')
 test_sample_bags_new, word2id, word2vec = process_sample(test_sample_bags, word2id, word2vec, rel2id, one_layer_type, entity2type, max_len=120)
 print('完成测试语料数值化处理\n正在保存...')
-np.savez('datasets3', train_set = train_sample_bags_new, test_set = test_sample_bags_new, rel2id = rel2id,
+np.savez('datasets', train_set = train_sample_bags_new, test_set = test_sample_bags_new, rel2id = rel2id,
          word2id = word2id, word2vec = word2vec, one_layer_type = one_layer_type, entity2type = entity2type)
 print('已完成所有数据预处理，请查看指定目录下文件.')
 
